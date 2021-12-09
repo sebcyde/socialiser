@@ -1,5 +1,10 @@
+import React, { useState, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import {
+	getAuth,
+	createUserWithEmailAndPassword,
+	onAuthStateChanged,
+} from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -15,6 +20,19 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
+// Registration Function
 export function signup(email, password) {
 	return createUserWithEmailAndPassword(auth, email, password);
+}
+
+// Log In Function
+
+// Custom Hook - Track Signed In User
+export function useAuth() {
+	const [currentUser, setCurrentUser] = useState();
+	useEffect(() => {
+		const unsub = onAuthStateChanged(auth, (user) => setCurrentUser(user));
+		return unsub;
+	}, []);
+	return currentUser;
 }
