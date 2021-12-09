@@ -1,21 +1,40 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import { Button } from 'react-materialize';
-import { signup, useAuth } from './Firebase';
+import { signup, useAuth, logout, login } from './Firebase';
 
 import HomePage from './Components/HomePage/HomePage';
 
 function App() {
 	const currentUser = useAuth();
-
+	const [SignedOut, setSignedOut] = useState('');
 	const [RegistrationSuccess, setRegistrationSuccess] = useState('');
-	const [UserEmail, setUserEmail] = useState();
+	const [LoginSuccess, setLoginSuccess] = useState('');
+	const [UserEmail, setUserEmail] = useState('');
 
 	// Prevents Spam Sign Ups / Sign Ins
 	const [Loading, setLoading] = useState(false);
 
 	const emailRef = useRef();
 	const passwordRef = useRef();
+
+	// Log In Existing Users
+	async function handleLogin() {
+		setLoading(true);
+		try {
+			await login(emailRef.current.value, passwordRef.current.value);
+			console.log('Existing User Logged In');
+			setLoginSuccess(
+				<p className="RegistrationSuccess">Sign In Successful</p>
+			);
+			setTimeout(() => {
+				setLoginSuccess('');
+			}, 3000);
+		} catch (error) {
+			alert(error);
+		}
+		setLoading(false);
+	}
 
 	// Registers New Users
 	async function handleSignUp() {
@@ -24,13 +43,30 @@ function App() {
 			await signup(emailRef.current.value, passwordRef.current.value);
 			console.log('New User Registration');
 			setRegistrationSuccess(
-				<p className="RegistraionSuccess">Registration Successful</p>
+				<p className="RegistrationSuccess">Registration Successful</p>
 			);
 			//Temporary
 			setUserEmail(currentUser?.email);
+			console.log(currentUser);
 
 			setTimeout(() => {
 				setRegistrationSuccess('');
+			}, 3000);
+		} catch (error) {
+			alert(error);
+		}
+		setLoading(false);
+	}
+
+	// Log Out Function
+	async function handleLogOut() {
+		setLoading(true);
+		try {
+			await logout();
+			console.log('User Signed Out');
+			setSignedOut(<p className="SignOutSuccess">Sign Out Successful</p>);
+			setTimeout(() => {
+				setSignedOut('');
 			}, 3000);
 		} catch (error) {
 			alert(error);
@@ -44,7 +80,9 @@ function App() {
 			<div className="SignInComponent">
 				<h1 className="SignInLaber">Welcome Back</h1>
 				{UserEmail}
+				{SignedOut}
 				{RegistrationSuccess}
+				{LoginSuccess}
 				<input
 					type="email"
 					className="EmailInput"
@@ -72,8 +110,8 @@ function App() {
 						node="a"
 						small
 						waves="light"
-						// onClick={handleLogin}
-						disabled={Loading}
+						onClick={handleLogin}
+						disabled={Loading || currentUser}
 					>
 						Sign In
 					</Button>
@@ -85,7 +123,14 @@ function App() {
 	// Temporary Sign Out Button
 	function LogOutComponent() {
 		return (
-			<Button node="a" small waves="light" className="SignOutButton">
+			<Button
+				node="a"
+				small
+				waves="light"
+				className="SignOutButton"
+				onClick={handleLogOut}
+				disabled={Loading || !currentUser}
+			>
 				Sign Out
 			</Button>
 		);

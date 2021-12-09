@@ -4,6 +4,8 @@ import {
 	getAuth,
 	createUserWithEmailAndPassword,
 	onAuthStateChanged,
+	signOut,
+	signInWithEmailAndPassword,
 } from 'firebase/auth';
 
 // Your web app's Firebase configuration
@@ -20,12 +22,21 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
+// Log Out Function
+export function logout() {
+	signOut(auth);
+}
+
 // Registration Function
 export function signup(email, password) {
 	return createUserWithEmailAndPassword(auth, email, password);
 }
 
 // Log In Function
+
+export function login(email, password) {
+	return signInWithEmailAndPassword(auth, email, password);
+}
 
 // Custom Hook - Track Signed In User
 export function useAuth() {
