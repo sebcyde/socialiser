@@ -10,7 +10,7 @@ function NavbarComponent() {
 				alignLinks="left"
 				brand={
 					<a className="brand-logo right" href="#">
-						Logo
+						Socialiser
 					</a>
 				}
 				id="mobile-nav"
