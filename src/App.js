@@ -27,9 +27,18 @@ function App() {
 		);
 	}
 
+	function LogOutComponent() {
+		return (
+			<Button node="a" small waves="light" className="SignOutButton">
+				Sign Out
+			</Button>
+		);
+	}
+
 	return (
 		<div className="App">
 			<SignInComponent />
+			<LogOutComponent />
 		</div>
 	);
 }
