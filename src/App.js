@@ -11,6 +11,7 @@ function App() {
 	const [RegistrationSuccess, setRegistrationSuccess] = useState('');
 	const [LoginSuccess, setLoginSuccess] = useState('');
 	const [UserEmail, setUserEmail] = useState('');
+	const [PageSwitcher, setPageSwitcher] = useState(<SignInComponent />);
 
 	// Prevents Spam Sign Ups / Sign Ins
 	const [Loading, setLoading] = useState(false);
@@ -29,6 +30,10 @@ function App() {
 			);
 			setTimeout(() => {
 				setLoginSuccess('');
+			}, 3000);
+			await LoginSuccess;
+			setTimeout(() => {
+				setPageSwitcher(<HomePage />);
 			}, 3000);
 		} catch (error) {
 			alert(error);
@@ -52,6 +57,10 @@ function App() {
 			setTimeout(() => {
 				setRegistrationSuccess('');
 			}, 3000);
+			await RegistrationSuccess;
+			setTimeout(() => {
+				setPageSwitcher(<HomePage />);
+			}, 3000);
 		} catch (error) {
 			alert(error);
 		}
@@ -67,6 +76,10 @@ function App() {
 			setSignedOut(<p className="SignOutSuccess">Sign Out Successful</p>);
 			setTimeout(() => {
 				setSignedOut('');
+			}, 3000);
+			await SignedOut;
+			setTimeout(() => {
+				setPageSwitcher(<SignInComponent />);
 			}, 3000);
 		} catch (error) {
 			alert(error);
@@ -136,12 +149,7 @@ function App() {
 		);
 	}
 
-	return (
-		<div className="App">
-			<SignInComponent />
-			<LogOutComponent />
-		</div>
-	);
+	return <div className="App">{PageSwitcher}</div>;
 }
 
 export default App;
