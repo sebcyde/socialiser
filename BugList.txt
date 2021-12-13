@@ -1,1 +1,3 @@
-log in / sign up doesnt show "sign up/ log in successful" text
+1- sign up doesnt show "sign up  successful" text 
+
+2- NavBar is short?

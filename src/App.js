@@ -88,7 +88,6 @@ function App() {
 			<div className="SignInComponent">
 				<h1 className="SignInLaber">Welcome Back</h1>
 
-				{/* {SignedOut} */}
 				{RegistrationSuccess}
 
 				<input
