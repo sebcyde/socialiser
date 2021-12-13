@@ -1,3 +1,2 @@
 1- sign up doesnt show "sign up  successful" text 
 
-2- NavBar is short?

@@ -1,7 +1,16 @@
 .NavBarContainer {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
 }
 .NavBarContainer .NavBar {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: transparent;
   width: 100%;
   border: none;

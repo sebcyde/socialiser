@@ -1,6 +1,10 @@
 .NavBarContainer {
 	width: 100%;
+	height: fit-content;
+	position: sticky;
+	top: 0px;
 	.NavBar {
+		height: fit-content;
 		background-color: transparent;
 		width: 100%;
 		border: none;
