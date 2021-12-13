@@ -1,11 +1,16 @@
 import React from 'react';
+import { Col, Preloader, Row } from 'react-materialize';
+import './Loadscreen.css';
 
 function Loadscreen() {
 	return (
-		<div>
-			<Col s={12}>
-				<ProgressBar />
-			</Col>
+		<div className="LoadScreenContainer">
+			<Row>
+				<Col s={4}>
+					<Preloader active color="blue" flashing={false} size="big" />
+					<p>Loading</p>
+				</Col>
+			</Row>
 		</div>
 	);
 }

@@ -4,6 +4,7 @@ import { Button } from 'react-materialize';
 import { signup, useAuth, logout, login } from './Firebase';
 
 import HomePage from './Components/HomePage/HomePage';
+import Loadscreen from './Components/LoadScreen/Loadscreen';
 
 function App() {
 	const currentUser = useAuth();
@@ -25,16 +26,10 @@ function App() {
 		try {
 			await login(emailRef.current.value, passwordRef.current.value);
 			console.log('Existing User Logged In');
-			setLoginSuccess(
-				<p className="RegistrationSuccess">Sign In Successful</p>
-			);
-			setTimeout(() => {
-				setLoginSuccess('');
-			}, 3000);
-			await LoginSuccess;
+			setPageSwitcher(<Loadscreen />);
 			setTimeout(() => {
 				setPageSwitcher(<HomePage />);
-			}, 3000);
+			}, 2000);
 		} catch (error) {
 			alert(error);
 		}
@@ -92,10 +87,10 @@ function App() {
 		return (
 			<div className="SignInComponent">
 				<h1 className="SignInLaber">Welcome Back</h1>
-				{UserEmail}
-				{SignedOut}
+
+				{/* {SignedOut} */}
 				{RegistrationSuccess}
-				{LoginSuccess}
+
 				<input
 					type="email"
 					className="EmailInput"

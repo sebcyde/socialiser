@@ -1,0 +1,34 @@
+.LoadScreenContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.LoadScreenContainer .row {
+  text-align: center;
+}
+.LoadScreenContainer .row .col {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.LoadScreenContainer .row .spinner-blue,
+.LoadScreenContainer .row .spinner-blue-only {
+  border-color: black;
+}
+.LoadScreenContainer .row p {
+  font-weight: 500;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: large;
+  margin-left: auto;
+  margin-right: auto;
+}/*# sourceMappingURL=Loadscreen.css.map */
