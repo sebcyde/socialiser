@@ -4,7 +4,7 @@ import './NavbarComponent.css';
 
 function NavbarComponent() {
 	return (
-		<div>
+		<div className="NavBarContainer">
 			<Navbar
 				className="NavBar"
 				alignLinks="left"

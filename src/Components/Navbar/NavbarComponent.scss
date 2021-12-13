@@ -1,10 +1,13 @@
-.NavBar {
-	background-color: transparent;
+.NavBarContainer {
 	width: 100%;
-	border: none;
-	box-shadow: none;
-	color: black;
-	a {
+	.NavBar {
+		background-color: transparent;
+		width: 100%;
+		border: none;
+		box-shadow: none;
 		color: black;
+		a {
+			color: black;
+		}
 	}
 }

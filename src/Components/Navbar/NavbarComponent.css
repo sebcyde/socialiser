@@ -1,10 +1,13 @@
-.NavBar {
+.NavBarContainer {
+  width: 100%;
+}
+.NavBarContainer .NavBar {
   background-color: transparent;
   width: 100%;
   border: none;
   box-shadow: none;
   color: black;
 }
-.NavBar a {
+.NavBarContainer .NavBar a {
   color: black;
 }/*# sourceMappingURL=NavbarComponent.css.map */
