@@ -1,3 +1,6 @@
 .HomePageContainer {
   width: 100%;
+}
+.HomePageContainer .btn-floating {
+  background-color: gray;
 }/*# sourceMappingURL=HomePage.css.map */
