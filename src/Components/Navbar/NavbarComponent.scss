@@ -13,5 +13,41 @@
 		a {
 			color: black;
 		}
+		.LogoModeToggle {
+			display: flex;
+			flex-direction: row;
+			width: fit-content;
+		}
+		li:last-of-type {
+			display: flex;
+			flex-direction: row;
+			width: fit-content;
+			padding-left: 2em;
+			span {
+				margin-left: 1em;
+				margin-right: 1em;
+			}
+
+			.switch {
+				display: flex;
+				flex-direction: row;
+				width: fit-content;
+				label {
+					display: flex;
+					flex-direction: row;
+					width: fit-content;
+					align-items: center;
+					i {
+						font-size: small;
+					}
+				}
+			}
+			.switch label input[type='checkbox']:checked + .lever {
+				background-color: whitesmoke;
+			}
+			.switch label input[type='checkbox']:checked + .lever:after {
+				background-color: whitesmoke;
+			}
+		}
 	}
 }

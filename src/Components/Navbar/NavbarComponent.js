@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, NavItem, Icon } from 'react-materialize';
+import { Navbar, NavItem, Icon, Switch } from 'react-materialize';
 import './NavbarComponent.css';
 
 function NavbarComponent() {
@@ -27,8 +27,17 @@ function NavbarComponent() {
 					preventScrolling: true,
 				}}
 			>
-				<NavItem onClick={function noRefCheck() {}}>Getting started</NavItem>
-				<NavItem href="components.html">Components</NavItem>
+				<NavItem onClick={function noRefCheck() {}}>Home</NavItem>
+				<NavItem href="components.html">Friends</NavItem>
+				<NavItem href="components.html">My Profile</NavItem>
+
+				<Switch
+					className="LightSwitch"
+					id="Switch-20"
+					offLabel={<i class="material-icons">wb_sunny</i>}
+					onChange={function noRefCheck() {}}
+					onLabel={<i class="material-icons">brightness_3</i>}
+				/>
 			</Navbar>
 		</div>
 	);

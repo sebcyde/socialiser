@@ -19,4 +19,47 @@
 }
 .NavBarContainer .NavBar a {
   color: black;
+}
+.NavBarContainer .NavBar .LogoModeToggle {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.NavBarContainer .NavBar li:last-of-type {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 2em;
+}
+.NavBarContainer .NavBar li:last-of-type span {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.NavBarContainer .NavBar li:last-of-type .switch {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.NavBarContainer .NavBar li:last-of-type .switch label {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+}
+.NavBarContainer .NavBar li:last-of-type .switch label i {
+  font-size: small;
+}
+.NavBarContainer .NavBar li:last-of-type .switch label input[type=checkbox]:checked + .lever {
+  background-color: whitesmoke;
+}
+.NavBarContainer .NavBar li:last-of-type .switch label input[type=checkbox]:checked + .lever:after {
+  background-color: whitesmoke;
 }/*# sourceMappingURL=NavbarComponent.css.map */
