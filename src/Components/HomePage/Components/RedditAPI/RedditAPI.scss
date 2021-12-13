@@ -1,0 +1,27 @@
+.RedditAPIContainer {
+	background: rgb(225, 225, 225);
+	margin-top: 10px;
+	border: 1px solid black;
+	width: 50%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1%;
+	padding-right: 1%;
+	border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+	.RedditAPIContainer {
+		background: rgb(225, 225, 225);
+		margin-top: 10px;
+		border: 1px solid black;
+		width: 100%;
+		height: 100%;
+		padding-left: 1%;
+		padding-right: 1%;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 10px;
+	}
+}

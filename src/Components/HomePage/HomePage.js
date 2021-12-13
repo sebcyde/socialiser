@@ -2,12 +2,13 @@ import React from 'react';
 import NavbarComponent from '../Navbar/NavbarComponent';
 import { Icon, Button } from 'react-materialize';
 import './HomePage.css';
+import RedditAPI from './Components/RedditAPI/RedditAPI';
 
 function HomePage() {
 	return (
 		<div className="HomePageContainer">
 			<NavbarComponent />
-
+			<RedditAPI />
 			<div className="FloatingGrayButtons">
 				<Button
 					className="GrayButton"

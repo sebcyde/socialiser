@@ -1,5 +1,9 @@
 .HomePageContainer {
   width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 .HomePageContainer .btn-floating {
   background-color: gray;
