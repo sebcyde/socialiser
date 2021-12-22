@@ -86,7 +86,7 @@ function App() {
 	function SignInComponent() {
 		return (
 			<div className="SignInComponent">
-				<h1 className="SignInLaber">Welcome Back</h1>
+				<h1 className="SignInLaber">Welcome</h1>
 
 				{RegistrationSuccess}
 
