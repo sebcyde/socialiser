@@ -1,39 +1,76 @@
-.NavBarContainer {
-	width: 15%;
-	height: 70vh;
-	position: relative;
-	top: 0px;
-	font-family: 'Oxanium', cursive;
-	text-align: center;
+@media only screen and (min-width: 769px) {
+	// Materialize NavBar Container
+	.section {
+		display: none !important;
+	}
 
-	.Navbar {
+	// Custom Made Navbar
+	.NavBarContainer {
+		width: 15%;
+		height: 70vh;
 		position: relative;
 		top: 0px;
-		background-color: transparent;
-		width: 100%;
-		height: fit-content;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-		border: none;
-		box-shadow: none;
-		color: black;
+		font-family: 'Oxanium', cursive;
 		text-align: center;
-		margin-top: 1em;
 
-		a {
+		.NavBar {
+			position: sticky;
+			top: 0px;
+			background-color: transparent;
 			width: 100%;
-			padding-top: 1em;
-			padding-bottom: 1em;
+			height: fit-content;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			border: none;
+			box-shadow: none;
 			color: black;
-			font-weight: 500;
-			font-size: 1.5em;
+			text-align: center;
+			margin-top: 1em;
+
+			a {
+				width: 100%;
+				padding-top: 1em;
+				padding-bottom: 1em;
+				color: black;
+				font-weight: 500;
+				font-size: 1.5em;
+			}
+			a:hover {
+				background: silver;
+				font-size: 1.7em;
+				font-weight: 600;
+			}
 		}
-		a:hover {
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	// Custom Made NavBar
+	.NavBarContainer {
+		display: none;
+	}
+
+	// Materialize NavBar Container
+	.section {
+		display: flex;
+		width: 100vw !important;
+		position: fixed !important;
+		top: 0px;
+		z-index: 10;
+		margin-top: 0;
+		padding-top: 0px;
+
+		.Navbar {
+			width: 100%;
+		}
+
+		nav {
 			background: silver;
-			font-size: 1.7em;
-			font-weight: 600;
+			a {
+				color: black;
+			}
 		}
 	}
 }

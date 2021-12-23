@@ -1,39 +1,70 @@
-.NavBarContainer {
-  width: 15%;
-  height: 70vh;
-  position: relative;
-  top: 0px;
-  font-family: "Oxanium", cursive;
-  text-align: center;
+@media only screen and (min-width: 769px) {
+  .section {
+    display: none !important;
+  }
+
+  .NavBarContainer {
+    width: 15%;
+    height: 70vh;
+    position: relative;
+    top: 0px;
+    font-family: "Oxanium", cursive;
+    text-align: center;
+  }
+  .NavBarContainer .NavBar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background-color: transparent;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+    box-shadow: none;
+    color: black;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .NavBarContainer .NavBar a {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: black;
+    font-weight: 500;
+    font-size: 1.5em;
+  }
+  .NavBarContainer .NavBar a:hover {
+    background: silver;
+    font-size: 1.7em;
+    font-weight: 600;
+  }
 }
-.NavBarContainer .Navbar {
-  position: relative;
-  top: 0px;
-  background-color: transparent;
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border: none;
-  box-shadow: none;
-  color: black;
-  text-align: center;
-  margin-top: 1em;
-}
-.NavBarContainer .Navbar a {
-  width: 100%;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  color: black;
-  font-weight: 500;
-  font-size: 1.5em;
-}
-.NavBarContainer .Navbar a:hover {
-  background: silver;
-  font-size: 1.7em;
-  font-weight: 600;
+@media only screen and (max-width: 768px) {
+  .NavBarContainer {
+    display: none;
+  }
+
+  .section {
+    display: flex;
+    width: 100vw !important;
+    position: fixed !important;
+    top: 0px;
+    z-index: 10;
+    margin-top: 0;
+    padding-top: 0px;
+  }
+  .section .Navbar {
+    width: 100%;
+  }
+  .section nav {
+    background: silver;
+  }
+  .section nav a {
+    color: black;
+  }
 }/*# sourceMappingURL=NavbarComponent.css.map */
