@@ -5,12 +5,24 @@ function NavbarComponent() {
 	return (
 		<div className="NavBarContainer">
 			<ul className="Navbar">
-				<li>Home</li>
-				<li>Test2</li>
-				<li>Test3</li>
-				<li>Test4</li>
-				<li>Test5</li>
-				<li>Test6</li>
+				<a>
+					<li>Home</li>
+				</a>
+				<a>
+					<li>Home</li>
+				</a>
+				<a>
+					<li>Home</li>
+				</a>
+				<a>
+					<li>Home</li>
+				</a>
+				<a>
+					<li>Home</li>
+				</a>
+				<a>
+					<li>Home</li>
+				</a>
 			</ul>
 		</div>
 	);

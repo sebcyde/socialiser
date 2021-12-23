@@ -9,6 +9,7 @@ function HomePage() {
 		<div className="HomePageContainer">
 			<NavbarComponent />
 			<RedditAPI />
+			<NavbarComponent />
 			<div className="FloatingGrayButtons">
 				<Button
 					className="GrayButton"
