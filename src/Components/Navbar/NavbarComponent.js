@@ -6,17 +6,14 @@ import 'aos/dist/aos.css';
 
 function NavbarComponent() {
 	useEffect(() => {
-		AOS.init({ once: true });
+		AOS.init({
+			once: true,
+		});
 	}, []);
 
 	return (
 		<>
-			<div
-				className="section"
-				// data-aos="fade-down"
-				// data-aos-easing="linear"
-				// data-aos-duration="1500"
-			>
+			<div className="section">
 				<Navbar
 					alignLinks="left"
 					brand={
@@ -42,61 +39,31 @@ function NavbarComponent() {
 					<NavItem href="components.html">Components</NavItem>
 				</Navbar>
 			</div>
-			<div className="NavBarContainer">
+			<div
+				className="NavBarContainer"
+				data-aos="fade-down"
+				data-aos-easing="ease-in"
+				data-aos-duration="600"
+				data-aos-offset="20"
+			>
 				<ul className="NavBar">
 					<a>
-						<li
-							data-aos="fade-down"
-							data-aos-easing="linear"
-							data-aos-duration="1000"
-						>
-							Home
-						</li>
+						<li>Home</li>
 					</a>
 					<a>
-						<li
-							data-aos="fade-down"
-							data-aos-easing="linear"
-							data-aos-duration="1000"
-						>
-							Home
-						</li>
+						<li>Home</li>
 					</a>
 					<a>
-						<li
-							data-aos="fade-down"
-							data-aos-easing="linear"
-							data-aos-duration="1000"
-						>
-							Home
-						</li>
+						<li>Home</li>
 					</a>
 					<a>
-						<li
-							data-aos="fade-down"
-							data-aos-easing="linear"
-							data-aos-duration="1000"
-						>
-							Home
-						</li>
+						<li>Home</li>
 					</a>
 					<a>
-						<li
-							data-aos="fade-down"
-							data-aos-easing="linear"
-							data-aos-duration="1000"
-						>
-							Home
-						</li>
+						<li>Home</li>
 					</a>
 					<a>
-						<li
-							data-aos="fade-down"
-							data-aos-easing="linear"
-							data-aos-duration="1000"
-						>
-							Home
-						</li>
+						<li>Home</li>
 					</a>
 				</ul>
 			</div>
