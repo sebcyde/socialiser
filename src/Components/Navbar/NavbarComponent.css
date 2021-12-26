@@ -27,21 +27,23 @@
     border: none;
     box-shadow: none;
     color: black;
-    text-align: center;
+    text-align: left;
     margin-top: 1em;
   }
   .NavBarContainer .NavBar a {
     width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
     color: black;
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    padding-left: 20%;
   }
   .NavBarContainer .NavBar a:hover {
     background: silver;
-    font-size: 1.7em;
     font-weight: 600;
+    cursor: pointer;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -66,5 +68,24 @@
   }
   .section nav a {
     color: black;
+  }
+  .section div.sidenav-overlay {
+    opacity: 0 !important;
+  }
+}
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }/*# sourceMappingURL=NavbarComponent.css.map */

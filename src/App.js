@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Button } from 'react-materialize';
 import { signup, useAuth, logout, login } from './Firebase';
-
 import HomePage from './Components/HomePage/HomePage';
 import Loadscreen from './Components/LoadScreen/Loadscreen';
 
 function App() {
+	AOS.init();
 	const currentUser = useAuth();
 	const [SignedOut, setSignedOut] = useState('');
 	const [RegistrationSuccess, setRegistrationSuccess] = useState('');

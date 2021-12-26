@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './NavbarComponent.css';
 import { Navbar, Icon, NavItem } from 'react-materialize';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function NavbarComponent() {
+	useEffect(() => {
+		AOS.init({ once: true });
+	}, []);
+
 	return (
 		<>
-			<div className="section">
+			<div
+				className="section"
+				// data-aos="fade-down"
+				// data-aos-easing="linear"
+				// data-aos-duration="1500"
+			>
 				<Navbar
 					alignLinks="left"
 					brand={
@@ -34,22 +45,58 @@ function NavbarComponent() {
 			<div className="NavBarContainer">
 				<ul className="NavBar">
 					<a>
-						<li>Home</li>
+						<li
+							data-aos="fade-down"
+							data-aos-easing="linear"
+							data-aos-duration="1000"
+						>
+							Home
+						</li>
 					</a>
 					<a>
-						<li>Home</li>
+						<li
+							data-aos="fade-down"
+							data-aos-easing="linear"
+							data-aos-duration="1000"
+						>
+							Home
+						</li>
 					</a>
 					<a>
-						<li>Home</li>
+						<li
+							data-aos="fade-down"
+							data-aos-easing="linear"
+							data-aos-duration="1000"
+						>
+							Home
+						</li>
 					</a>
 					<a>
-						<li>Home</li>
+						<li
+							data-aos="fade-down"
+							data-aos-easing="linear"
+							data-aos-duration="1000"
+						>
+							Home
+						</li>
 					</a>
 					<a>
-						<li>Home</li>
+						<li
+							data-aos="fade-down"
+							data-aos-easing="linear"
+							data-aos-duration="1000"
+						>
+							Home
+						</li>
 					</a>
 					<a>
-						<li>Home</li>
+						<li
+							data-aos="fade-down"
+							data-aos-easing="linear"
+							data-aos-duration="1000"
+						>
+							Home
+						</li>
 					</a>
 				</ul>
 			</div>
