@@ -3,13 +3,14 @@ import NavbarComponent from '../Navbar/NavbarComponent';
 import { Icon, Button } from 'react-materialize';
 import './HomePage.css';
 import RedditAPI from './Components/RedditAPI/RedditAPI';
+import RightMenu from '../RightMenu/RightMenu';
 
 function HomePage() {
 	return (
 		<div className="HomePageContainer">
 			<NavbarComponent />
 			<RedditAPI />
-			<NavbarComponent />
+			<RightMenu />
 			<div className="FloatingGrayButtons">
 				<Button
 					className="GrayButton"
